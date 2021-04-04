@@ -1,0 +1,16 @@
+{
+  "groups": [
+    {
+      "name": "rocketmq.customer",
+      "type": "com.txj.config.MqCustomerConfigure",
+      "sourceType": "com.txj.config.MqCustomerConfigure"
+    },
+    {
+      "name": "rocketmq.producer",
+      "type": "com.txj.config.MqProducterConfigure",
+      "sourceType": "com.txj.config.MqProducterConfigure"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
