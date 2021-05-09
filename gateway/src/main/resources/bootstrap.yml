@@ -10,14 +10,17 @@ spring:
         file-extension: yaml
     gateway:
       routes:
-        - id: order-service
-          uri: lb://order-service
+        - id: producer-service
+          uri: lb://producer-service
           predicates:
-            - Path=/order/**
-
-        - id: customer-service
-          uri: lb://customer-service
+            - Path=/producer/**
+          filters:
+            - StripPrefix=1
+        - id: consumer-service
+          uri: lb://consumer-service
           predicates:
-            - Path=/customer/**
+            - Path=/consumer/**
+          filters:
+            - StripPrefix=1
   application:
     name: gateway-service
